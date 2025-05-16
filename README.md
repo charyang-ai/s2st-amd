@@ -1,10 +1,16 @@
 Meta just released a large model for language but their demo doesn't work out of the box locally on Mac Meta architecture.
 So I made this modified version that does.
 
+# How to install
+pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.4
+pip3 install git+https://github.com/huggingface/transformers.git sentencepiece
+pip3 install -r requirements.txt
+
+
 # How to run
 ```
-export PYTORCH_ENABLE_MPS_FALLBACK=1
-python app.py
+export HIP_VISIBLE_DEVICES=0
+python gradio_gpu.py --share
 ```
 Do not forget to export the variable or it will crash! Hopefully Apple will keep working with pytorch for full support
 
