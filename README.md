@@ -2,9 +2,9 @@ Meta just released a large model for language but their demo doesn't work out of
 So I made this modified version that does.
 
 # How to install
-pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.4
-pip3 install git+https://github.com/huggingface/transformers.git sentencepiece
-pip3 install -r requirements.txt
+- pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.4
+- pip3 install git+https://github.com/huggingface/transformers.git sentencepiece
+- pip3 install -r requirements.txt
 
 
 # How to run
