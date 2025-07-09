@@ -2,6 +2,11 @@ Meta just released a large model for language but their demo doesn't work out of
 So I made this modified version that does.
 
 # Installation
+## Install uv
+- powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+## Create virtual env with uv
+- uv venv <env name> 
+
 ## Install Torch
 ### Setup with PyTorch-rocm6.4
 - pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.4 
