@@ -9,16 +9,16 @@ So I made this modified version that does.
 
 ## Install Torch
 ### Setup with PyTorch-rocm6.4
-- pip3 install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.4 
+- uv pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.4 
 ### Setup with Torch-CPU
-- pip3 install torch torchvision torchaudio
+- uv pip install torch torchvision torchaudio
 ### Setup with Torch-directml
-- pip3 install torch-directml==0.2.5.dev240914
-- pip3 install torchvision==2.4.1 torchaudio==2.4.1
+- uv pip install torch-directml==0.2.5.dev240914
+- uv pip install torchvision==2.4.1 torchaudio==2.4.1
 
 ## Install Other things
-- pip3 install git+https://github.com/huggingface/transformers.git sentencepiece
-- pip3 install -r requirements.txt
+- uv pip install git+https://github.com/huggingface/transformers.git sentencepiece
+- uv pip install -r requirements.txt
   
 # How to run
 ```
