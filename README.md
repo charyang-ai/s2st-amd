@@ -7,13 +7,13 @@ So I made this modified version that does.
 - conda create <env> python=3.12
 
 ## Install Torch
-### Setup with PyTorch-rocm6.4
+### If MI/Radeon dGPU, setup with PyTorch-rocm6.4
 - pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.4 
-### Setup with Torch-CPU
+### If laptop CPU, setup with Torch-CPU
 - pip install torch torchvision torchaudio
-### Setup with Torch-directml
+### If laptop iGPU, setup with Torch-directml
 - pip install torch-directml==0.2.5.dev240914
-- pip install torchvision==2.4.1 torchaudio==2.4.1
+- pip install torchvision==0.19.1 torchaudio==2.4.1
 
 ## Install Other things
 - pip install -r requirements.txt
@@ -21,7 +21,7 @@ So I made this modified version that does.
 - pip install protobuf
 - pip install soundfile
   
-# How to run
+# How to run GUI version with rocm on dGPU
 ```
 export HIP_VISIBLE_DEVICES=0
 python gradio_gpu.py --share
@@ -29,10 +29,5 @@ python gradio_gpu.py --share
 Do not forget to export the variable or it will crash! Hopefully Apple will keep working with pytorch for full support
 
 # Download the models
-The script will use your HF_TOKEN to download the models, but if you want to download only exactly the file needed you can also download from https://huggingface.co/facebook/seamless-m4t-v2-large/tree/main the following files:
-- seamlessM4T_v2_large.pt
-- spm_char_lang38_tc.model
-- vocoder_v2.pt
+The script will use your HF_TOKEN to download the models, but if you want to download only exactly the file needed you can also download from https://huggingface.co/facebook/seamless-m4t-v2-large/tree/main all files.
 
-# Caveat
-Unfortunately due to the poor support on the metal architecture the model isn't as precise as it is running on CUDA
