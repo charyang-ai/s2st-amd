@@ -2,23 +2,24 @@ Meta just released a large model for language but their demo doesn't work out of
 So I made this modified version that does.
 
 # Installation
-## Install uv
-- powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-## Create virtual env with uv
-- uv venv <env name> 
+## Install miniforge3
+## Create virtual env with conda
+- conda create <env> python=3.12
 
 ## Install Torch
 ### Setup with PyTorch-rocm6.4
-- uv pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.4 
+- pip install --pre torch torchvision torchaudio --index-url https://download.pytorch.org/whl/nightly/rocm6.4 
 ### Setup with Torch-CPU
-- uv pip install torch torchvision torchaudio
+- pip install torch torchvision torchaudio
 ### Setup with Torch-directml
-- uv pip install torch-directml==0.2.5.dev240914
-- uv pip install torchvision==2.4.1 torchaudio==2.4.1
+- pip install torch-directml==0.2.5.dev240914
+- pip install torchvision==2.4.1 torchaudio==2.4.1
 
 ## Install Other things
-- uv pip install git+https://github.com/huggingface/transformers.git sentencepiece
-- uv pip install -r requirements.txt
+- pip install -r requirements.txt
+- pip install git+https://github.com/huggingface/transformers.git sentencepiece
+- pip install protobuf
+- pip install soundfile
   
 # How to run
 ```
